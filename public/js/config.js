@@ -26,15 +26,40 @@
         cookie : 'jquery-cookie/jquery.cookie',
         template : 'artTemplate/template-web',
         nprogress : 'nprogress/nprogress',
-        index : '../js/index',
-        util : '../js/util',
+        validate : 'validate/jquery-validate',
+        form : 'jquery-form/jquery.form',
+        datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker.min',
+        language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        uploadify : 'uploadify/jquery.uploadify.min',
+        region : 'jquery-region/jquery.region',
+        ckeditor : 'ckeditor/ckeditor',
         common : '../js/common',
+        index : '../js/index',
         login : '../js/login',
-        tealist : '../js/teacher-list'
+        util : '../js/util',
+        tealist : '../js/teacher-list',
+        teaadd : '../js/teacher-add',
+        settings : '../js/settings',
+        courselist : '../js/course-list',
+        courseadd : '../js/course-add',
+        coursebasic : '../js/course-basic'
     },
     shim : {// 兼容非标准模块
         bootstrap : {
             deps : ['jquery']
+        },
+        validate : {
+            deps : ['jquery']
+        },
+        language : {
+            deps : ['jquery','datepicker']
+        },
+        uploadify : {
+            deps : ['jquery']
+        },
+        ckeditor : {
+            exports : 'CKEDITOR'
         }
+
     }
 });
